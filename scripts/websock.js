@@ -9,7 +9,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import * as Log from '/scripts/logging.js';
+import * as Log from '@scriptsRoute@/logging.js';
 
 // this has performance issues in some versions Chromium, and
 // doesn't gain a tremendous amount of performance increase in Firefox

@@ -9,21 +9,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import * as Log from '/scripts/logging.js';
-import { decodeUTF8 } from '/scripts/strings.js';
-import { dragThreshold } from '/scripts/browser.js';
-import EventTargetMixin from '/scripts/eventtarget.js';
-import Display from '/scripts/display.js';
-import Keyboard from '/scripts/keyboard.js';
-import Mouse from '/scripts/mouse.js';
-import Cursor from '/scripts/cursor.js';
-import Websock from '/scripts/websock.js';
-import DES from '/scripts/des.js';
-import KeyTable from '/scripts/keysym.js';
-import XtScancode from '/scripts/xtscancodes.js';
-import Inflator from '/scripts/inflator.js';
-import { encodings, encodingName } from '/scripts/encodings.js';
-import '/scripts/polyfill.js';
+import * as Log from '@scriptsRoute@/logging.js';
+import { decodeUTF8 } from '@scriptsRoute@/strings.js';
+import { dragThreshold } from '@scriptsRoute@/browser.js';
+import EventTargetMixin from '@scriptsRoute@/eventtarget.js';
+import Display from '@scriptsRoute@/display.js';
+import Keyboard from '@scriptsRoute@/keyboard.js';
+import Mouse from '@scriptsRoute@/mouse.js';
+import Cursor from '@scriptsRoute@/cursor.js';
+import Websock from '@scriptsRoute@/websock.js';
+import DES from '@scriptsRoute@/des.js';
+import KeyTable from '@scriptsRoute@/keysym.js';
+import XtScancode from '@scriptsRoute@/xtscancodes.js';
+import Inflator from '@scriptsRoute@/inflator.js';
+import { encodings, encodingName } from '@scriptsRoute@/encodings.js';
+import '@scriptsRoute@/polyfill.js';
 
 // How many seconds to wait for a disconnect to finish
 const DISCONNECT_TIMEOUT = 3;

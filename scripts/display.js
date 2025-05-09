@@ -9,8 +9,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import * as Log from '/scripts/logging.js';
-import Base64 from '/scripts/base64.js';
+import * as Log from '@scriptsRoute@/logging.js';
+import Base64 from '@scriptsRoute@/base64.js';
 
 let SUPPORTS_IMAGEDATA_CONSTRUCTOR = false;
 try {

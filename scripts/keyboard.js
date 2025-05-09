@@ -9,11 +9,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import * as Log from '/scripts/logging.js';
-import { stopEvent } from '/scripts/events.js';
-import * as KeyboardUtil from '/scripts/util.js';
-import KeyTable from '/scripts/keysym.js';
-import * as browser from '/scripts/browser.js';
+import * as Log from '@scriptsRoute@/logging.js';
+import { stopEvent } from '@scriptsRoute@/events.js';
+import * as KeyboardUtil from '@scriptsRoute@/util.js';
+import KeyTable from '@scriptsRoute@/keysym.js';
+import * as browser from '@scriptsRoute@/browser.js';
 
 //
 // Keyboard event handler

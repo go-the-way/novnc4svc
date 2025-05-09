@@ -9,11 +9,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import keysyms from '/scripts/keysymdef.js';
-import vkeys from '/scripts/vkeys.js';
-import fixedkeys from '/scripts/fixedkeys.js';
-import DOMKeyTable from '/scripts/domkeytable.js';
-import * as browser from '/scripts/browser.js';
+import keysyms from '@scriptsRoute@/keysymdef.js';
+import vkeys from '@scriptsRoute@/vkeys.js';
+import fixedkeys from '@scriptsRoute@/fixedkeys.js';
+import DOMKeyTable from '@scriptsRoute@/domkeytable.js';
+import * as browser from '@scriptsRoute@/browser.js';
 
 // Get 'KeyboardEvent.code', handling legacy browsers
 export function getKeycode(evt){

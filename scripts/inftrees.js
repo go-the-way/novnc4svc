@@ -9,7 +9,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import * as utils from '/scripts/common.js';
+import * as utils from '@scriptsRoute@/common.js';
 
 var MAXBITS = 15;
 var ENOUGH_LENS = 852;

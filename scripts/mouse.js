@@ -9,9 +9,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import * as Log from '/scripts/logging.js';
-import { isTouchDevice } from '/scripts/browser.js';
-import { setCapture, stopEvent, getPointerEvent } from '/scripts/events.js';
+import * as Log from '@scriptsRoute@/logging.js';
+import { isTouchDevice } from '@scriptsRoute@/browser.js';
+import { setCapture, stopEvent, getPointerEvent } from '@scriptsRoute@/events.js';
 
 const WHEEL_STEP = 10; // Delta threshold for a mouse wheel step
 const WHEEL_STEP_TIMEOUT = 50; // ms

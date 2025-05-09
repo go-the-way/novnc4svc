@@ -15,7 +15,6 @@ import (
 	"embed"
 
 	"github.com/gin-gonic/gin"
-	"github.com/go-the-way/svc"
 )
 
 var (
@@ -55,7 +54,8 @@ func Plugin(noVNCRoute, wsVNCRoute, scriptsRoute, idQueryName string, transforme
 }
 
 func (p *plugin) Plug(engine *gin.Engine) {
-	engine.StaticFS(p.scriptsRoute, svc.NewFSAdapter(scriptsRoute, scriptsFs))
+	// engine.StaticFS(p.scriptsRoute, svc.NewFSAdapter(scriptsRoute, scriptsFs))
+	engine.GET(p.scriptsRoute+"/:script", scripts("scripts/", p.scriptsRoute))
 	engine.GET(p.noVNCRoute, noVNC(p.wsVNCRoute, p.scriptsRoute))
 	engine.GET(p.wsVNCRoute, wsVNC(p.idQueryName, p.transformer))
 }

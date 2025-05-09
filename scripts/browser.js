@@ -9,7 +9,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import * as Log from '/scripts/logging.js';
+import * as Log from '@scriptsRoute@/logging.js';
 
 // Touch detection
 export let isTouchDevice = ('ontouchstart' in document.documentElement) ||

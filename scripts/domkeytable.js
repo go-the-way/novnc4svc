@@ -9,7 +9,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import KeyTable from '/scripts/keysym.js';
+import KeyTable from '@scriptsRoute@/keysym.js';
 
 /*
  * Mapping between HTML key values and VNC/X11 keysyms for "special"

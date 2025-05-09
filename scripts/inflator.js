@@ -9,8 +9,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { inflateInit, inflate, inflateReset } from '/scripts/inflate.js';
-import ZStream from '/scripts/zstream.js';
+import { inflateInit, inflate, inflateReset } from '@scriptsRoute@/inflate.js';
+import ZStream from '@scriptsRoute@/zstream.js';
 
 export default class Inflate {
     constructor() {

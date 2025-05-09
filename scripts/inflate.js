@@ -9,11 +9,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import * as utils from '/scripts/common.js';
-import adler32 from '/scripts/adler32.js';
-import crc32 from '/scripts/crc32.js';
-import inflate_fast from '/scripts/inffast.js';
-import inflate_table from '/scripts/inftrees.js';
+import * as utils from '@scriptsRoute@/common.js';
+import adler32 from '@scriptsRoute@/adler32.js';
+import crc32 from '@scriptsRoute@/crc32.js';
+import inflate_fast from '@scriptsRoute@/inffast.js';
+import inflate_table from '@scriptsRoute@/inftrees.js';
 
 var CODES = 0;
 var LENS = 1;
