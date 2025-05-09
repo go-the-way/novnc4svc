@@ -13,11 +13,16 @@ package novnc4svc
 
 import (
 	"net/http"
+	"strings"
 
 	"github.com/gin-gonic/gin"
 )
 
-func noVNC(ctx *gin.Context) {
-	ctx.Header("Content-Type", "text/html; charset=UTF-8")
-	ctx.String(http.StatusOK, indexFs)
+func noVNC(wsRoute, scriptsRoute string) func(ctx *gin.Context) {
+	return func(ctx *gin.Context) {
+		ctx.Header("Content-Type", "text/html; charset=UTF-8")
+		html0 := strings.ReplaceAll(indexFs, "@wsRoute@", wsRoute)
+		html1 := strings.ReplaceAll(html0, "@scriptsRoute@", scriptsRoute)
+		ctx.String(http.StatusOK, html1)
+	}
 }

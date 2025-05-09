@@ -56,6 +56,6 @@ func Plugin(noVNCRoute, wsRoute, scriptsRoute, idQueryName string, transformer T
 
 func (p *plugin) Plug(engine *gin.Engine) {
 	engine.StaticFS(p.scriptsRoute, svc.NewFSAdapter(scriptsRoute, scriptsFs))
-	engine.GET(p.noVNCRoute, noVNC)
+	engine.GET(p.noVNCRoute, noVNC(p.wsRoute, p.scriptsRoute))
 	engine.GET(p.wsRoute, wsVNC(p.idQueryName, p.transformer))
 }
