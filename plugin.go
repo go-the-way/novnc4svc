@@ -27,27 +27,27 @@ var (
 
 const (
 	noVNCRoute   = "/no_vnc"
-	wsRoute      = "/cloud_vnc"
+	wsVNCRoute   = "/ws_vnc"
 	scriptsRoute = "/scripts"
 )
 
 type (
 	Transformer func(id string) (wsUrl string)
 	plugin      struct {
-		noVNCRoute, wsRoute, scriptsRoute, idQueryName string
+		noVNCRoute, wsVNCRoute, scriptsRoute, idQueryName string
 
 		transformer Transformer
 	}
 )
 
 func DefaultPlugin(transformer Transformer) *plugin {
-	return Plugin(noVNCRoute, wsRoute, scriptsRoute, "vnc_id", transformer)
+	return Plugin(noVNCRoute, wsVNCRoute, scriptsRoute, "vnc_id", transformer)
 }
 
-func Plugin(noVNCRoute, wsRoute, scriptsRoute, idQueryName string, transformer Transformer) *plugin {
+func Plugin(noVNCRoute, wsVNCRoute, scriptsRoute, idQueryName string, transformer Transformer) *plugin {
 	return &plugin{
 		noVNCRoute:   noVNCRoute,
-		wsRoute:      wsRoute,
+		wsVNCRoute:   wsVNCRoute,
 		scriptsRoute: scriptsRoute,
 		idQueryName:  idQueryName,
 		transformer:  transformer,
@@ -56,6 +56,6 @@ func Plugin(noVNCRoute, wsRoute, scriptsRoute, idQueryName string, transformer T
 
 func (p *plugin) Plug(engine *gin.Engine) {
 	engine.StaticFS(p.scriptsRoute, svc.NewFSAdapter(scriptsRoute, scriptsFs))
-	engine.GET(p.noVNCRoute, noVNC(p.wsRoute, p.scriptsRoute))
-	engine.GET(p.wsRoute, wsVNC(p.idQueryName, p.transformer))
+	engine.GET(p.noVNCRoute, noVNC(p.wsVNCRoute, p.scriptsRoute))
+	engine.GET(p.wsVNCRoute, wsVNC(p.idQueryName, p.transformer))
 }
